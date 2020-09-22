@@ -29,7 +29,7 @@ public class Tabeller {
 		for(i = 0; i < tabell.length; i++) {
 			
 			if(i != tabell.length - 1) {
-				str += (tabell[i] + ",");
+				str += (tabell[i] + ", ");
 			}
 			
 			else {

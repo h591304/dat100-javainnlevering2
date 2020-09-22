@@ -33,12 +33,13 @@ public class Matriser {
 		
 		int arr1;
 		int arr2;
+		
+		//siden alle matriser er rektangulære, kan man bruke matrise[0] som lengdemål
 		int[][] nyMatrise = new int[matrise.length][matrise[0].length];
 		
 		for(arr1 = 0; arr1 < nyMatrise.length; arr1++) {
-			nyMatrise[arr1] = new int[matrise[arr1].length];
-			
 			for(arr2 = 0; arr2 < nyMatrise[arr1].length; arr2++) {
+				
 				nyMatrise[arr1][arr2] = matrise[arr1][arr2] * tall;
 			} 
 		}
@@ -55,7 +56,7 @@ public class Matriser {
 		for(i = 0; i < a.length; i++) {
 			for(j = 0; j < a[i].length; j++) {
 				
-				if(a == b) {
+				if(a[i][j] == b[i][j]) {
 					return erLik;
 				}
 			}
@@ -65,17 +66,43 @@ public class Matriser {
 	
 	// e)
 	public static int[][] speile(int[][] matrise) {
-
-		// TODO
-		throw new UnsupportedOperationException("speile ikke implementert");
+		
+		/*int rad;
+		int kolonne;
+		int[][] speiletMatrise = new int[matrise.length][matrise[0].length];
+		
+		for(rad = 0; rad < speiletMatrise.length; rad++) {
+			int sKolonne = rad;
+			
+			for(kolonne = speiletMatrise[rad].length; kolonne >= 0; kolonne++) {
+				int sRad = kolonne;
+				int speil = matrise[rad][kolonne];
+				speiletMatrise[sRad][sKolonne] = speil;
+				
+			} 
+		}
+		
+		return speiletMatrise;*/
 	
 	}
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("multipliser ikke implementert");
-	
+		
+		/*int i;
+		int j;
+		int[][] multiMatrise;
+		
+		for(i = 0; i < a.length; i++) {
+			for(j = 0; j < a[i].length; j++) {
+				
+				if(a.length == b[0].length && a[0].length == b.length) {
+					multiMatrise = a*b;
+				}
+			}
+		} 
+		return multiMatrise;*/
 	}
+		
+	
 }
